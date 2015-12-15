@@ -1,1 +1,0 @@
-{"virtualbox":{"/webapps/ansible":{"guestpath":"/webapps/ansible","hostpath":"/Users/Saket/Ansible/playbooks/mean","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/Saket/Ansible/playbooks/mean/ansible","disabled":false}}}
