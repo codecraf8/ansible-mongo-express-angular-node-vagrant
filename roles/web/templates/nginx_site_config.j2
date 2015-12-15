@@ -1,0 +1,33 @@
+upstream {{ nginx_hostname }} {
+    server 127.0.0.1:{{node_port}};
+    keepalive 8;
+}
+
+# the nginx server instance
+server {
+    listen 0.0.0.0:80;
+
+    server_name {{ nginx_server_name }};
+    
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml
+        application/xml+rss text/javascript image/svg+xml application/vnd.ms-fontobject;
+
+    access_log {{ nginx_access_log_file }};
+    error_log {{ nginx_error_log_file }};
+
+
+    location / {
+      index	index.html;
+      try_files $uri $uri/ /index.html;
+    }
+
+    location /static/ {
+        alias   {{ nginx_static_dir }};
+        expires 1y;
+    }
+
+    location /media/ {
+        alias   {{ nginx_media_dir }};
+    }
+
+ }

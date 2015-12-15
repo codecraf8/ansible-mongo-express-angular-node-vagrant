@@ -1,0 +1,32 @@
+---
+
+# Nginx settings.
+nginx_server_name: 2.2.2.2
+nginx_hostname: example.com 
+node_port: 3000
+server_file: server.js
+
+# Git settings.
+git_repo: https://github.com/5ak3t/node-todo
+
+# Application settings.
+nodeapp_user: "appusr"
+nodeapp_group: "appgrp"
+project_name: "meanproj"
+application_name: meantest
+env_path: "/webapps/ansible/{{ project_name }}/"
+
+app_path: "{{ env_path }}/{{ application_name }}"
+application_log_dir: "{{ env_path }}/logs"
+
+# Nginx settings
+nginx_http_port: 80
+nginx_https_port: 443
+nginx_access_log_file: "{{ application_log_dir }}/nginx_access.log"
+nginx_error_log_file: "{{ application_log_dir }}/nginx_error.log"
+nginx_static_dir: "{{ app_path }}/static/"
+nginx_media_dir: "{{ app_path }}/media/"
+
+
+aws_access_key_id: na
+aws_secret_access_key: na

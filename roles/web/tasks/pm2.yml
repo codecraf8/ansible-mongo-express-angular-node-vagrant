@@ -1,0 +1,11 @@
+---
+- name: PM2 | Install PM2
+  sudo: yes
+  npm: name=pm2 global=yes
+  tags: pm2
+
+- name: start application with pm2
+  command: pm2 start {{ app_path }}/{{ server_file}}
+  ignore_errors: yes
+  become: yes
+  tags: pm2

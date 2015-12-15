@@ -1,0 +1,18 @@
+---
+
+- include: create_users_and_groups.yml
+
+- include: setup_git_repo.yml
+  tags: deploy
+
+- include: set_file_permissions.yml
+  tags: deploy
+
+- include: express.yml
+  tags: deploy
+  
+- include: nginx.yml
+  tags: nginx
+
+- include: pm2.yml
+  tags: deploy
