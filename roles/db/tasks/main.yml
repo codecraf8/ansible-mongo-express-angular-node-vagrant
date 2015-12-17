@@ -18,10 +18,3 @@
   sudo: yes
   service: name=mongodb state=started
   tags: mongodb
-  
-
-# https://github.com/brianium/vagrant-ansible-mean/blob/master/provisioning/roles/mongodb/tasks/main.yml
-
-# http://cloudmesh.github.io/introduction_to_cloud_computing/class/lesson/ansible_playbook.html
-
-# mongo cluster - https://github.com/ansible/ansible-examples/tree/master/mongodb
