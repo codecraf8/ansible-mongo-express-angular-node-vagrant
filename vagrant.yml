@@ -12,6 +12,6 @@
     - env_vars/local
 
   roles:
-    #- base
-    #- db
+    - base
+    - db
     - web
