@@ -6,7 +6,7 @@
         owner={{ nodeapp_user }}
         group={{ nodeapp_group }}
         state=directory
-  notify: restart application
 
 - name: Create a symlink for legacy node issue
   command: ln -s /usr/bin/nodejs /usr/bin/node  
+  ignore_errors: yes

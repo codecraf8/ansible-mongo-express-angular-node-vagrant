@@ -10,9 +10,5 @@
   ignore_errors: yes
   become: yes
 
-- name: restart application
-  service: name=pm2-init.sh state=restarted
-  when: pm2_service_state != 'stopped'
-  
 - name: restart nginx
   service: name=nginx state=restarted
